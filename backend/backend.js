@@ -87,7 +87,7 @@ app.get('/login', (req, res) => {
       //link: https://developer.spotify.com/documentation/web-api/tutorials/code-flow
       //redirects to auth endpoint which THEN links to my callback route '/login/callback'
       res.redirect('https://accounts.spotify.com/authorize?' +
-      stringify({
+      queryString.stringify({
         response_type: 'code',
         client_id: client_id,
         scope: scope,
