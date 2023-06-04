@@ -1,25 +1,26 @@
-import { mongoLinkConfig, databaseName, tableName, spotifyID, spotifySecret, secureState } from "./configs/keyConfigurations.js";
 
-import express, { Router } from "express";
-import SpotifyWebApi from 'spotify-web-api-node';
 
-import { MongoClient } from "mongodb";
+const express = require("express")
+var SpotifyWebApi = require('spotify-web-api-node');
+
+const { MongoClient } = require("mongodb")
 
 
 
 const app = express()
-const router = Router()
+
+const configK = require("./configs/keyConfigurations.json")
+
+console.log(configK)
 
 //mongoDB cluster link
-const mongoLink = mongoLinkConfig
+const mongoLink = configK.mongoLinkConfig
 
 const client = new MongoClient(mongoLink)
 
-const database = client.db(databaseName)
+const database = client.db(configK.databaseName)
 
-const collectionLogs = database.collection(tableName)
-
-
+const collectionLogs = database.collection(configK.tableName)
 
 
 
@@ -28,11 +29,13 @@ const collectionLogs = database.collection(tableName)
 
 
 
-import { stringify } from "querystring";
 
 
-const client_id = spotifyID
-const client_secret = spotifySecret
+const queryString = require("querystring")
+
+
+const client_id = configK.spotifyID
+const client_secret = configK.spotifySecret
 
 var access_token = null
 
@@ -48,7 +51,7 @@ var trackRecs = null
 //permissions that are associated with the auth code
 const scope = "user-read-private user-read-email user-top-read playlist-modify-public"
 
-const state = secureState
+const state = configK.secureState
 //where spotify auth will redirect after prompting the user to auth
 const redirect_uri = "http://localhost:8000/login/callback"
 
