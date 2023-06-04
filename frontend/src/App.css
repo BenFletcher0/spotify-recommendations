@@ -1,0 +1,100 @@
+.App{
+    text-align: center;
+    align-content: center;
+
+    
+    margin-top: 10%;
+
+}
+.background-green{
+    background-color: lightgreen;
+
+    border: 0.333px black solid;
+    text-align: center;
+    align-content: center;
+}
+
+.Home{
+
+    text-align: center;
+    align-content: center;
+
+}
+.ind{
+    border: 1px solid black;
+}
+.pfp{
+    width: 500px;
+    height: 500px;
+}
+
+.RecContainer{
+
+    width: 800px;
+    height: 600px;
+    background-color: lightgreen;
+
+    justify-content: center;
+    align-content: center;
+    
+
+    margin-top: 0%;
+    margin-left: 1%;
+
+    
+
+   
+
+
+}
+.logContainer{
+    width: 800px;
+    height: 400px;
+    background-color: lightgreen;
+
+    justify-content: center;
+    align-content: center;
+   
+
+    margin-top: 5%;
+    margin-left: 1%;
+
+    box-shadow: 20px 20px black;
+
+  
+    
+
+}
+.logInner{
+    width: 700px; 
+    height: 300px;
+    margin-top: 5%;
+    margin-left: 5%;
+    
+
+    
+
+    overflow: scroll;
+    background-color: lightgrey;
+}
+.artistRec,.genreRec,.trackRec{
+
+    width: 700px; 
+    height: 210px;
+    margin-top: 5%;
+    margin-left: 5%;
+    
+
+    
+
+    overflow: scroll;
+    background-color: lightgrey;
+}
+
+.bordered{
+    border: 2px black solid;
+    
+}
+
+
+
