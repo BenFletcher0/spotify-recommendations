@@ -5,6 +5,7 @@ Frameworks and languages:
     Backend-  ExpressJS
     Database- MongoDB
 
+Future: update and make front end look nicer
     
 
  
